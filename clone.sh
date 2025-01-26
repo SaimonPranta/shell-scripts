@@ -6,7 +6,6 @@
  No_Color='\033[0m';
 
 
-
  if [[ "${1}" == "var" || "${1}" == "micple.com" || "${1}" == "default.imp" || "${1}" == "storage.imp" || "${1}" == "panel" || "${1}" == "campaign" || "${1}" == "web" || "${1}" == "archives" || "${1}" == "files" ]]
  then
 
@@ -65,7 +64,7 @@ fi
    if [[ "$PWD" == *"backend"* ]]
     then
 
-     git clone "root@49.13.76.170:/var/git/micple.com/backend/${1}.git"
+     git clone "ssh://root@git.micple.com:24/var/git/micple.com/backend/${1}.git"
 
      if [[ "${?}" == 0 ]]
      then
@@ -82,9 +81,9 @@ fi
 
       if [[ "$PWD" == *"2-profile"* ]]
         then
-          git clone "root@49.13.76.170:/var/git/micple.com/frontend/2-profile/${1}.git"
+          git clone "ssh://root@git.micple.com:24/var/git/micple.com/frontend/2-profile/${1}.git"
       else
-          git clone "root@49.13.76.170:/var/git/micple.com/frontend/${1}.git"
+          git clone "ssh://root@git.micple.com:24/var/git/micple.com/frontend/${1}.git"
       fi
 
      if [[ "${?}" == 0 ]]
@@ -105,7 +104,7 @@ fi
   if [[ "$PWD" == *"frontend"* ]]
    then
 
-     git clone "root@49.13.76.170:/var/git/panel.micple.com/frontend/${1}.git"
+     git clone "ssh://root@git.micple.com:24/var/git/panel.micple.com/frontend/${1}.git"
 
      if [[ "${?}" == 0 ]]
      then
@@ -120,7 +119,7 @@ fi
 
    else
 
-     git clone "root@49.13.76.170:/var/git/panel.micple.com/backend/${1}.git"
+     git clone "ssh://root@git.micple.com:24/var/git/panel.micple.com/backend/${1}.git"
      echo "clone has been complited successfully !!!"
 
    fi
@@ -128,7 +127,7 @@ fi
  elif [[ "$PWD" == *"default.imp"* ]]
  then
 
-    git clone "root@49.13.76.170:/var/git/default/${1}.git"
+    git clone "ssh://root@git.micple.com:24/var/git/default/${1}.git"
 
     if [[ "${?}" == 0 ]]
      then
